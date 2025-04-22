@@ -46,8 +46,10 @@ Salida: 13
 
 ## Cómo Usar Este Programa
 - Ejecute el archivo Python en un intérprete de Python 3.x.
-- Siga las instrucciones en pantalla para elegir la conversión:- Opción 1: Decimal a Binario.
+- Siga las instrucciones en pantalla para elegir la conversión:
+- Opción 1: Decimal a Binario.
 - Opción 2: Binario a Decimal.
+- Opción 3: Salir del programa.
 
 - Ingrese los números de acuerdo con las reglas de cada conversión.
 
