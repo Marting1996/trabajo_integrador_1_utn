@@ -43,7 +43,7 @@ def decimal_a_binario():
 
 
   # Unimos el array de los caracteres binarios e imprimimos en pantalla
-  print(f"El número {decimal} en binario es: ", "".join(binary))
+  print(f"El número {decimal} en binario es: ", "".join(binary));
 
 
 
@@ -53,7 +53,13 @@ def decimal_a_binario():
 
 def binario_a_decimal ():
   # Se solicita al usuario el número binario a convertir
-  numero_binario = input("Ingrese el número binario que desea convertir a decimal: ")
+  while True:
+    numero_binario = input("Ingrese el número binario que desea convertir a decimal: ")
+    # Recorre cada carácter del número ingresado y comprueba que sea un 0 o un 1; si hay otro valor, muestra un mensaje de error.
+    if not all(c in "01" for c in numero_binario):
+        print("Formato incorrecto. Ingrese solo ceros y unos.")
+        continue
+    break
 
   # Variable valor_posicional, utilizada para calcular las potencias de 2.
   valor_posicional = 1
@@ -79,16 +85,24 @@ def binario_a_decimal ():
   # Se imprime el resultado
   print (f"El número {numero_binario} en decimal es: {numero_decimal}")
 
+
 def main():
+    #Bucle while para repetir hasta ingresar la opción correcta
+  while True:
     print("Seleccione una opción:")
     print("1: Convertir de decimal a binario")
     print("2: Convertir de binario a decimal")
-    opcion = input("Ingrese su opción (1 o 2): ")
+    print("3: Salir")
+    opcion = input("Ingrese su opción (1, 2 o 3): ")
 
     if opcion == "1":
         decimal_a_binario()
     elif opcion == "2":
         binario_a_decimal()
+    elif opcion == "3":
+        print("¡Gracias por utilizar este programa!")
+        break
     else:
         print("Opción inválida.")
+
 main()
